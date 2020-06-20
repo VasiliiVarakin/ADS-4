@@ -1,4 +1,5 @@
 #include <cassert>
+
   template<typename T> 
   class TPQueue 
   { 
@@ -26,12 +27,14 @@
    // дополнительный элемент поможет нам различать конец и начало очереди 
    arr = new T[size + 1]; 
   } 
+
   // деструктор класса Queue 
   template<typename T> 
   TPQueue<T>::~TPQueue() 
   { 
    delete[] arr; 
   } 
+
   // функция добавления элемента в очередь 
   template<typename T> 
   void TPQueue<T>::push(const T& item) 
@@ -63,6 +66,7 @@
    if (end > size) 
     end -= size + 1; // возвращаем end на начало очереди 
   } 
+
   // функция удаления элемента из очереди 
   template<typename T> 
   T TPQueue<T>::pop() 
@@ -76,6 +80,7 @@
   begin -= size + 1; // возвращаем begin на начало очереди 
   return item; 
   } 
+
   // функция чтения элемента на первой позиции 
   template<typename T> 
   T TPQueue<T>::get() const 
@@ -84,6 +89,7 @@
    assert(count > 0); 
    return arr[begin]; 
   } 
+
   // функция проверки очереди на пустоту 
   template<typename T> 
   bool TPQueue<T>::isEmpty() const 
@@ -96,6 +102,7 @@
   { 
    return count == size; 
   } 
+
   struct SYM 
   { 
   char ch; 
