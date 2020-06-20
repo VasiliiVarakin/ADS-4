@@ -18,7 +18,8 @@ private:
     ITEM* head;
     ITEM* u;
     ITEM* tail;
-};
+}; 
+
 template<typename T>
 typename TPQueue<T>::ITEM* TPQueue<T>::create(const T& data)
 {
@@ -33,6 +34,7 @@ TPQueue<T>::~TPQueue()
     while (head)
         pop();
 }
+
 template<typename T>
 void TPQueue<T>::push(const T& inf)
 {
@@ -94,7 +96,6 @@ void TPQueue<T>::push(const T& inf)
         }
     }
 }
-
 template<typename T>
 T TPQueue<T>::pop()
 {
@@ -122,7 +123,6 @@ void TPQueue<T>::print() const
         std::cout << std::endl;	    std::cout << std::endl;
     }
 }
-
 struct SYM
 {
     char ch;
